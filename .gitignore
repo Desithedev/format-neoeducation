@@ -1,0 +1,40 @@
+# ==========================================
+# NEO Education Skill - Git Ignore Configuration
+# ==========================================
+
+# Không đưa dữ liệu input đề thi lên repo
+input/*
+!input/.gitkeep
+input/de/*
+!input/de/.gitkeep
+
+# Không đưa kết quả xuất bài (LaTeX, PDF) lên repo
+output/*
+!output/.gitkeep
+output/latex/*
+!output/latex/.gitkeep
+output/pdf/*
+!output/pdf/.gitkeep
+
+# Giữ lại các tài nguyên watermark chuẩn của tổ chức
+assets/watermark/*
+!assets/watermark/README.md
+!assets/watermark/watermark.tex
+!assets/watermark/neo-watermark.png
+
+# TeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# OS metadata
+.DS_Store
+Thumbs.db

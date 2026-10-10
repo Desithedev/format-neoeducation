@@ -1,0 +1,14 @@
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\newcommand{\NEOWatermarkOpacity}{0.15}
+\newcommand{\NEOWatermarkAngle}{0}
+\newcommand{\NEOWatermarkContent}{\includegraphics[width=\textwidth]{assets/watermark.png}}
+
+\AddToShipoutPictureBG{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[opacity=\NEOWatermarkOpacity,rotate=\NEOWatermarkAngle,inner sep=0pt]
+      at (current page.center) {\NEOWatermarkContent};
+  \end{tikzpicture}
+}
